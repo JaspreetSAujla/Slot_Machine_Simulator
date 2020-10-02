@@ -28,5 +28,6 @@ class SlotMachine {
             System.out.println("Would you like to play again? \r\n(yes/no)");
             again = scn.nextLine();
         }
+        scn.close();
     }
 }
