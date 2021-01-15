@@ -1,20 +1,22 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+// Use instead of built in arrays.
+#include <vector>
 using namespace std;
 
-int RandomIndex(string TheList[], int Number) {
-    // Makes seed random
-    // Number is used so that all slots have different seeds
+// Use vector with string elements.
+int RandomIndex(vector<string> TheList, int Number) {
+    // Makes seed random.
+    // Number is used so that all slots have different seeds.
     srand(time(0) + Number);
-    // % keeps it periodic within the size of the array
-    return (rand() % sizeof(TheList));
+    // % keeps it periodic within the size of the array.
+    return (rand() % TheList.size());
 } 
 
-
 int main() {
-    // Define initial variables
-    string items[] = {"apple", "banana", "pear"};
+    // Define initial variables.
+    vector<string> items = {"apple", "banana", "pear"};
     string Slot1;
     string Slot2;
     string Slot3;
@@ -25,8 +27,8 @@ int main() {
         cout << "Type 'yes' to spin the wheel! \n";
         cin >> SpinWheel;
         Slot1 = items[RandomIndex(items, 1)];
-        Slot2 = items[RandomIndex(items, 2)];
-        Slot3 = items[RandomIndex(items, 3)];
+        Slot2 = items[RandomIndex(items, 4)];
+        Slot3 = items[RandomIndex(items, 7)];
         cout << Slot1 << " " << Slot2 << " " << Slot3 << endl;
 
         if (Slot1 == Slot2 && Slot1 == Slot3) {
