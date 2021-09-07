@@ -37,12 +37,12 @@ class SlotMachine {
         Runs the code for the slot machine.
 
         Variables:
-            fillerVariable = Used as a filler so that the user can 
-                             hit enter.
+            spinWheel = Used as a filler so that the user can 
+                        hit enter.
         */
         while (this.playAgain.equals("yes")) {
             System.out.println("Press enter to spin wheel.");
-            String fillerVariable = scn.nextLine();
+            String spinWheel = scn.nextLine();
             generateRandomItems();
             System.out.println("Spinning...");
             System.out.println(this.slot_1 + " " + this.slot_2 + " " + this.slot_3);
