@@ -43,6 +43,7 @@ class SlotMachine:
     def run(self):
         """
         Runs the code for the slot machine.
+        Uses a while loop so that the player can play again.
         """
         while self.play_again == "yes":
             input("Press any key to spin the wheel.")
